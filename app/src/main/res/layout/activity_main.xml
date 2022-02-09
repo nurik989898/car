@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="@dimen/normal_dimens"
+    tools:context=".MainActivity">
+<ImageView
+    android:id="@+id/image_car"
+    android:layout_width="180dp"
+    android:layout_height="130dp"
+    android:layout_marginTop="32sp"
+    android:scaleType="fitXY"
+    android:src="@drawable/car"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:fontFamily="@font/bungee_regular"
+        android:id="@+id/hello"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/large_dimens"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textSize="44sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image_car"
+        android:text="Hello there, \nwelcome back"/>
+    <TextView
+        android:id="@+id/signIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/big_dimens"
+        android:textColor="@color/white_black"
+        android:textSize="22dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hello"
+        android:text="Sign in to continue"/>
+    <LinearLayout
+        android:id="@+id/conteiner_edit_text"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/normal_dimens"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/signIn">
+
+       <com.google.android.material.textfield.TextInputLayout
+          style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+           android:layout_width="match_parent"
+           android:layout_height="60dp">
+           <EditText
+               android:id="@+id/username"
+               android:hint="Username"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"/>
+       </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            app:passwordToggleEnabled="true"
+            android:layout_height="60dp">
+            <EditText
+                android:id="@+id/password"
+                android:inputType="textPassword"
+                android:layout_marginTop="4dp"
+                android:hint="Password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/forgetPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/big_dimens"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:layout_marginEnd="@dimen/normal_dimens"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/conteiner_edit_text"
+        android:text="Forget password ?"/>
+    <Button
+        android:id="@+id/Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_marginTop="@dimen/normal_dimens"
+        android:text="GO"
+        app:layout_constraintTop_toBottomOf="@id/forgetPassword"
+        android:backgroundTint="@color/black"/>
+    <TextView
+        android:id="@+id/signUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/big_dimens"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Button"
+        android:text="New user? Sign up"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
