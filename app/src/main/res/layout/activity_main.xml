@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     android:paddingHorizontal="@dimen/normal_dimens"
     tools:context=".MainActivity">
 <ImageView
@@ -12,7 +13,6 @@
     android:layout_height="130dp"
     android:layout_marginTop="32sp"
     android:scaleType="fitXY"
-    android:src="@drawable/car"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent"/>
     <TextView
@@ -50,6 +50,8 @@
        <com.google.android.material.textfield.TextInputLayout
           style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
            android:layout_width="match_parent"
+           app:boxStrokeColor="@color/black"
+           android:textColorHint="@color/black"
            android:layout_height="60dp">
            <EditText
                android:id="@+id/username"
@@ -62,6 +64,8 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="match_parent"
             app:passwordToggleEnabled="true"
+            android:textColorHint="@color/black"
+            app:boxStrokeColor="@color/black"
             android:layout_height="60dp">
             <EditText
                 android:id="@+id/password"
