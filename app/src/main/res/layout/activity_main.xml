@@ -64,7 +64,8 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="match_parent"
             app:passwordToggleEnabled="true"
-            android:textColorHint="@color/black"
+            app:placeholderTextAppearance="@color/black"
+            app:placeholderTextColor="@color/black"
             app:boxStrokeColor="@color/black"
             android:layout_height="60dp">
             <EditText
